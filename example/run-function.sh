@@ -2,5 +2,7 @@
 
 source ../source/message.sh
 
-message "This is a read text" red
-message "this is a read background" red true
+COLOR=${COLOR:-red}
+
+message "This is a read text" $COLOR
+message "this is a read background" $COLOR true
