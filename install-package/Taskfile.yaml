@@ -1,0 +1,47 @@
+# This is a taskfile for the Task tool. See https://taskfile.dev for install instructions.
+
+version: '3'
+
+env:
+  OWNER: I'm WGO
+
+tasks:
+  test:
+    desc: test message info
+    cmds:
+      - echo "test"
+  
+  update:
+    desc: "run apt update"
+    cmds:
+      - COMMAND=update ./apt-command.sh
+  
+  upgrade:
+    desc: "run mapt upgrade"
+    cmds:
+      - COMMAND=upgrade ./apt-command.sh
+
+  htop-i:
+    desc: install htop
+    cmds:
+      - PACKAGE=htop MODE=1 ./run.sh
+
+  htop-r:
+    desc: "\e[31muninstall\e[0m htop"
+    cmds:
+      - PACKAGE=htop MODE=0 ./run.sh
+
+  nodejs-i:
+    desc: install npm + nodejs
+    cmds:
+      - PACKAGE=nodejs MODE=1 ./run.sh
+
+  nodejs-r:
+    desc: "\e[31muninstall\e[0m npm + nodejs"
+    cmds:
+      - PACKAGE=nodejs MODE=0 ./run.sh
+
+  pm2-i:
+    desc: install npm + nodejs
+    cmds:
+      - PACKAGE=pm2 MODE=1 ./run.sh
