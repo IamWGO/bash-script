@@ -1,0 +1,22 @@
+# This is a taskfile for the Task tool. See https://taskfile.dev for install instructions.
+
+version: '3'
+
+env:
+  OWNER: I'm WGO
+
+tasks:
+  test:
+    desc: For all temporay test function
+    cmds:
+      - echo "test"
+  
+  text-blue:
+    desc: run ../run.sh with blue color
+    cmds:
+      - COLOR=blue ./run.sh
+  
+  text-red:
+    desc: run ../run.sh with blue color
+    cmds:
+      - COLOR=red ./run.sh
