@@ -1,0 +1,89 @@
+# This is a taskfile for the Task tool. See https://taskfile.dev for install instructions.
+
+version: '3'
+
+env:
+  OWNER: I'm WGO
+
+tasks:
+  a-htop:
+    desc: Install htop
+    cmds:
+      - PACKAGE=htop ./run.sh
+  
+  b-firewall:
+    desc: set Firewall (ufw)
+    cmds:
+      - PACKAGE=firewall ./run.sh
+  
+  c-snapd:
+    desc: install snapd
+    cmds:
+      - PACKAGE=snapd ./run.sh
+  
+  d-certbot:
+    desc: install certbot
+    cmds:
+      - PACKAGE=certbot ./run.sh
+
+  e-nodejs:
+    desc: install nodejs + npm
+    cmds:
+      - PACKAGE=nodejs ./run.sh
+
+  f-express:
+    desc: install express
+    cmds:
+      - PACKAGE=express ./run.sh
+
+  g-express-project:
+    desc: setup express project
+    cmds:
+      - PACKAGE=express-project ./run.sh
+
+  h-npm-start:
+    desc: setup npm-start
+    cmds:
+      - PACKAGE=npm-start ./run.sh
+
+  i-mysql:
+    desc: setup mysql
+    cmds:
+      - PACKAGE=mysql ./run.sh
+
+  j-mongodb:
+    desc: setup mongodb
+    cmds:
+      - PACKAGE=mongodb ./run.sh
+
+  k-github:
+    desc: setup github
+    cmds:
+      - PACKAGE=github ./run.sh
+
+  l-apache:
+    desc: setup apache + php
+    cmds:
+      - PACKAGE=apache ./run.sh
+
+  m-vshost:
+    desc: setup apache + php
+    cmds:
+      - PACKAGE=vshost ./run.sh
+
+  n-wordpress: 
+    desc: setup wordpress
+    cmds:
+      - PACKAGE=wordpress ./run.sh
+
+  o-nginx: 
+    desc: setup nginx
+    cmds:
+      - PACKAGE=nginx ./run.sh
+
+  p-server-choice:
+    desc: select server nodejs, apache, nginx
+    cmds:
+      - PACKAGE=server-choice ./run.sh
+
+    
