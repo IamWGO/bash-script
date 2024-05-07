@@ -1,0 +1,40 @@
+# This is a taskfile for the Task tool. See https://taskfile.dev for install instructions.
+
+version: '3'
+
+env:
+  OWNER: I'm WGO
+
+tasks:
+  e1:
+    desc: Ex 1. CPU Usage Monitoring Script
+    cmds:
+      - ./monitoring_cpu.sh
+  e2:
+    desc: Ex 2. Disk Space Usage Monitoring Script
+    cmds:
+      - ./monitoring_space.sh
+  e3:
+    desc: Ex 3. Service Restart Script
+    cmds:
+      - ./service_restart.sh
+  e4:
+    desc: Ex 4. File Backup Script
+    cmds:
+      - ./security_backup_input.sh
+  e5-major:
+    desc: Ex 5. Version Bump Script (x.0.0)
+    cmds:
+      - ./bump_version.sh major
+  e5-minor:
+    desc: Ex 5. Version Bump Script (0.x.0)
+    cmds:
+      - ./bump_version.sh minor
+  e5-patch:
+    desc: Exercise 5| Version Bump Script (0.0.x)
+    cmds:
+      - ./bump_version.sh patch
+  version:
+    desc: $ sh cat version.md
+    cmds:
+      - cat version.md
